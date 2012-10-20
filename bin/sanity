@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'sanity'
+require 'sanity/cli'
+
+Sanity::CLI.new.start

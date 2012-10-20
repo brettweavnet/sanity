@@ -11,7 +11,7 @@ module Sanity
           @members = ['weaver']
         end
 
-        def test(value)
+        def private(value)
           puts value == true
         end
 

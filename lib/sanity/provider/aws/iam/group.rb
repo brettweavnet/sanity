@@ -6,8 +6,7 @@ module Sanity
 
           attr_accessor :validate
 
-          def initialize(args)
-            @name   = args[:name]
+          def initialize
             @logger = SanityLogger.new
           end
 
@@ -20,7 +19,6 @@ module Sanity
             state = args[:state]
             value = args[:value]
             result = value == state
-            @logger.info "#{result.to_s}" 
             @logger.info "#{result.to_s}" 
           end
 

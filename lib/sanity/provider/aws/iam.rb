@@ -7,20 +7,21 @@ module Sanity
         attr_accessor :name, :members
 
         def initialize(name)
-          @name = name
+          @name   = name
+          @logger = SanityLogger.new
         end
 
         def members(value)
           case @name
           when 'users'
-            report(value == iam.list_users)
+            report(value == iam.list_users_by_name)
           when 'groups'
-            report(value == iam.list_groups)
+            report(value == iam.list_groups_by_name)
           end
         end
 
         def report(result)
-          puts result
+          @logger.info result
         end
 
         private

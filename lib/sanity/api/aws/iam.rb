@@ -3,11 +3,11 @@ module Sanity
     module AWS
       class IAM
 
-        def list_users
+        def list_users_by_name
           iam.list_users.body['Users'].map {|u| u['UserName']}
         end
 
-        def list_groups
+        def list_groups_by_name
           iam.list_groups.body['Groups'].map {|g| g['GroupName']}
         end
 

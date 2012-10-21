@@ -16,11 +16,12 @@ module Sanity
           end
 
           def report(args)
-            state = args[:state]
-            value = args[:value]
+            state  = args[:state]
+            value  = args[:value]
             result = value == state
-            @logger.info "Current: #{state}"
-            @logger.info "Valid: #{value}"
+
+            @logger.debug "Current: #{state}"
+            @logger.debug "Valid: #{value}"
             @logger.info "#{result.to_s}" 
           end
 

@@ -10,7 +10,7 @@ module Sanity
     def_delegators :@logger, :debug, :error, :info, :warn
 
     def initialize(args = {})
-      @log_level = args[:log_level] ||= 'info'
+      @log_level = args[:log_level] ||= 'debug'
       @logger    = args[:logger] ||= new_logger(args)
     end
 

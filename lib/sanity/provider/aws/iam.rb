@@ -7,13 +7,20 @@ module Sanity
         attr_accessor :name, :members
 
         def initialize(name)
-          @name    = name
-          puts iam.list
-          @members = iam.list
+          @name = name
         end
 
         def members(value)
-          puts value == @members
+          case @name
+          when 'users'
+            report(value == iam.list_users)
+          when 'groups'
+            report(value == iam.list_groups)
+          end
+        end
+
+        def report(result)
+          puts result
         end
 
         private

@@ -1,3 +1,4 @@
+require "sanity/provider/aws"
 require "sanity/provider/github"
 
 module Sanity

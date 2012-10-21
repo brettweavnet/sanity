@@ -6,23 +6,16 @@ module Sanity
 
           attr_accessor :validate
 
+          include Sanity::Mixin::Report
+
           def initialize
             @logger = SanityLogger.new
           end
 
           def validate(value)
-            report :value => value, 
-                   :state => iam.list_users_by_name
-          end
-
-          def report(args)
-            state  = args[:state]
-            value  = args[:value]
-            result = value == state
-
-            @logger.debug "Current: #{state}"
-            @logger.debug "Valid: #{value}"
-            @logger.info "#{result.to_s}" 
+            report :logger => @logger,
+                   :value  => value,
+                   :state  => iam.list_users_by_name
           end
 
           private

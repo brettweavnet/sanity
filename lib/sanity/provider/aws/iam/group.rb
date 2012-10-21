@@ -2,7 +2,7 @@ module Sanity
   module Provider
     module AWS
       module IAM
-        class Groups
+        class Group
 
           attr_accessor :validate
 

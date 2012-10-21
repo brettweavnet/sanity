@@ -1,5 +1,5 @@
-require "sanity/provider/aws/iam/groups"
-require "sanity/provider/aws/iam/users"
+require "sanity/provider/aws/iam/group"
+require "sanity/provider/aws/iam/user"
 
 module Sanity
   module Provider

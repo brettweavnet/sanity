@@ -1,22 +1,25 @@
 module Sanity
   module Provider
-    module Github
+    module AWS
 
-      class Repo
+      class IAM
 
         attr_accessor :name, :members
 
         def initialize(name)
           @name    = name
-          @members = ['weaver']
-        end
-
-        def private(value)
-          puts value == true
+          puts iam.list
+          @members = iam.list
         end
 
         def members(value)
           puts value == @members
+        end
+
+        private
+
+        def iam
+          @iam ||= Sanity::API::AWS::IAM.new
         end
 
       end

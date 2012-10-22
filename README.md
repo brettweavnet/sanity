@@ -12,7 +12,7 @@ gem install sanity
 
 Working on DSL where state of cloud provider settings can be checked against given configuration:
 
-For example:
+For example, a given config to check AWS IAM users and groups:
 
 ```
 aws_iam_user do

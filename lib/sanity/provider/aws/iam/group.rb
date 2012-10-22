@@ -13,7 +13,7 @@ module Sanity
           end
 
           def validate(value)
-            @running = "Validating AWS IAM groups."
+            @running = "Validating AWS IAM groups"
             report :value  => value, 
                    :state  => iam.list_groups_by_name
           end

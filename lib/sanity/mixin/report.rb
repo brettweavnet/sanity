@@ -8,10 +8,9 @@ module Sanity
         value  = args[:value]
         result = value == state
 
-        @logger.info "#{@running}"
         @logger.debug "Current: #{state}"
         @logger.debug "Valid: #{value}"
-        @logger.info "#{result.to_s}"
+        @logger.info "#{@running} : #{result.to_s}"
       end
     end
   end

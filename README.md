@@ -1,24 +1,28 @@
 # Sanity
 
-TODO: Write a gem description
+Experimental DSL to validate cloud provider settings.
 
 ## Installation
 
-Add this line to your application's Gemfile:
-
-    gem 'sanity'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install sanity
+```
+gem install sanity
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+Working on DSL where state of cloud provider settings can be checked against given configuration:
+
+For example:
+
+```
+aws_iam_user do
+  validate ['user1', 'user2']
+end
+
+aws_iam_group do
+  validate ["group1", "group2"]
+end
+```
 
 ## Contributing
 

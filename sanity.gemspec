@@ -6,8 +6,8 @@ require 'sanity/version'
 Gem::Specification.new do |gem|
   gem.name          = "sanity"
   gem.version       = Sanity::VERSION
-  gem.authors       = ["Brett Weaver"]
-  gem.email         = ["brett@weav.net"]
+  gem.authors       = ["brettweavnet"]
+  gem.email         = ["open-source-845@weav.net"]
   gem.description   = %q{Write a gem description}
   gem.summary       = %q{Write a gem summary}
   gem.homepage      = ""
